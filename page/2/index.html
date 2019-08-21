@@ -76,7 +76,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -95,10 +95,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Entradas',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Categorias',
-            TAGS: 'Etiquetas',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -129,7 +129,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -149,16 +149,16 @@
             <h2 id="name">周兵</h2>
             <h3 id="title">Mobile Developer &amp; JavaScript</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Shenyang, China</span>
-            <a id="follow" target="_blank" href="https://github.com/zhoubing/">SEGUIR</a>
+            <a id="follow" target="_blank" href="https://github.com/zhoubing/">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                23
-                <span>Entradas</span>
+                24
+                <span>posts</span>
             </div>
             <div class="article-info-block">
                 0
-                <span>Etiqueta</span>
+                <span>tag</span>
             </div>
         </div>
         
@@ -206,6 +206,127 @@
 
             
             <section id="main">
+    <article id="post-Swift" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019/07/15/Swift/">Swift</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019/07/15/Swift/">
+            <time datetime="2019-07-15T14:22:10.000Z" itemprop="datePublished">2019-07-15</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>SwiftUI</p>
+<p><a href="https://www.objc.io/blog/2019/07/02/lazy-loading/" target="_blank" rel="noopener">https://www.objc.io/blog/2019/07/02/lazy-loading/</a></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2019/07/15/Swift/" data-id="cjzlubr81000ggtgokdt3d884" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-Youtube-List" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -259,7 +380,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/15/Youtube-List/" data-id="cjz6a1c5z000i553lkvf89gtu" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/07/15/Youtube-List/" data-id="cjzlubr84000kgtgolw4ag6p1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -381,7 +502,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/15/Docker-Articles/" data-id="cjz6a1c5b0006553l43b1rari" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/07/15/Docker-Articles/" data-id="cjzlubr7l0008gtgoibxz2wou" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -532,7 +653,8 @@
 <p><a href="https://antonioleiva.com/objects-kotlin/" target="_blank" rel="noopener">https://antonioleiva.com/objects-kotlin/</a></p>
 <p>Kotlin: Destructuring Declarations</p>
 <p><a href="https://proandroiddev.com/kotlin-destructuring-declarations-46aad0ee5261" target="_blank" rel="noopener">https://proandroiddev.com/kotlin-destructuring-declarations-46aad0ee5261</a></p>
-<p><a href="https://androidweekly.net/#373" target="_blank" rel="noopener">https://androidweekly.net/#373</a></p>
+<p><a href="https://androidweekly.net/issues/issue-373" target="_blank" rel="noopener">https://androidweekly.net/issues/issue-373</a></p>
+<p><a href="https://androidweekly.net/issues/issue-374" target="_blank" rel="noopener">https://androidweekly.net/issues/issue-374</a></p>
 <p>Android6.0系统悬浮窗权限的问题解决方法</p>
 <p><a href="https://www.jianshu.com/p/529755edc3c5" target="_blank" rel="noopener">https://www.jianshu.com/p/529755edc3c5</a></p>
 <p>Android Kotlin Clean Architecture</p>
@@ -546,8 +668,35 @@
 <p><a href="https://medium.com/androiddevelopers/gesture-navigation-going-edge-to-edge-812f62e4e83e" target="_blank" rel="noopener">https://medium.com/androiddevelopers/gesture-navigation-going-edge-to-edge-812f62e4e83e</a></p>
 <p><a href="https://medium.com/androiddevelopers/gesture-navigation-handling-visual-overlaps-4aed565c134c" target="_blank" rel="noopener">https://medium.com/androiddevelopers/gesture-navigation-handling-visual-overlaps-4aed565c134c</a></p>
 <p><a href="https://medium.com/snapp-mobile/experimenting-with-motion-in-android-9283962ae0ef" target="_blank" rel="noopener">https://medium.com/snapp-mobile/experimenting-with-motion-in-android-9283962ae0ef</a></p>
+<p><a href="https://medium.com/androiddevelopers/now-in-android-episode-1-5e8082173595" target="_blank" rel="noopener">https://medium.com/androiddevelopers/now-in-android-episode-1-5e8082173595</a></p>
 <p>fragment</p>
 <p><a href="https://developer.android.com/jetpack/androidx/releases/fragment#1.2.0-alpha02" target="_blank" rel="noopener">https://developer.android.com/jetpack/androidx/releases/fragment#1.2.0-alpha02</a></p>
+<p>Android Compose</p>
+<p><a href="http://intelligiblebabble.com/compose-from-first-principles/" target="_blank" rel="noopener">http://intelligiblebabble.com/compose-from-first-principles/</a></p>
+<p><a href="https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/ui/README.md" target="_blank" rel="noopener">https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/ui/README.md</a></p>
+<p><a href="https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/compose/README.md" target="_blank" rel="noopener">https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/compose/README.md</a></p>
+<p><a href="https://material.io/design/material-studies/rally.html#typography" target="_blank" rel="noopener">https://material.io/design/material-studies/rally.html#typography</a></p>
+<p>Android Jetpack</p>
+<p><a href="https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/README.md" target="_blank" rel="noopener">https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/README.md</a></p>
+<p>AndroidX 对比表</p>
+<p><a href="https://www.jianshu.com/p/5ff650460161" target="_blank" rel="noopener">https://www.jianshu.com/p/5ff650460161</a></p>
+<p>ConstraintLayout</p>
+<p><a href="https://blog.csdn.net/jxb196203/article/details/80695410" target="_blank" rel="noopener">https://blog.csdn.net/jxb196203/article/details/80695410</a></p>
+<p><a href="https://www.jianshu.com/p/578c92a3839b" target="_blank" rel="noopener">https://www.jianshu.com/p/578c92a3839b</a></p>
+<p><a href="https://blog.csdn.net/ccw0054/article/details/79554946" target="_blank" rel="noopener">https://blog.csdn.net/ccw0054/article/details/79554946</a></p>
+<p><a href="https://www.niwoxuexi.com/blog/android00/article/268.html" target="_blank" rel="noopener">https://www.niwoxuexi.com/blog/android00/article/268.html</a></p>
+<p><a href="https://www.jianshu.com/p/b884b8c46584" target="_blank" rel="noopener">https://www.jianshu.com/p/b884b8c46584</a></p>
+<p><a href="https://www.jianshu.com/p/16e95b6b5e38" target="_blank" rel="noopener">https://www.jianshu.com/p/16e95b6b5e38</a></p>
+<p>BottomDialog</p>
+<p><a href="https://www.jianshu.com/p/e1d2cc82e756" target="_blank" rel="noopener">https://www.jianshu.com/p/e1d2cc82e756</a></p>
+<p>ToolBar</p>
+<p><a href="https://www.jianshu.com/p/c35fb8bda4d8" target="_blank" rel="noopener">https://www.jianshu.com/p/c35fb8bda4d8</a></p>
+<p><a href="https://www.jianshu.com/p/05ef48b777cc" target="_blank" rel="noopener">https://www.jianshu.com/p/05ef48b777cc</a></p>
+<p><a href="https://www.jianshu.com/p/617be02dc265" target="_blank" rel="noopener">https://www.jianshu.com/p/617be02dc265</a></p>
+<p>RecyclerView解耦</p>
+<p><a href="https://medium.com/verybuy-dev/recyclerview-in-mvp-把-viewholder-的邏輯移到-presenter-去做吧-1320250a3534" target="_blank" rel="noopener">https://medium.com/verybuy-dev/recyclerview-in-mvp-%E6%8A%8A-viewholder-%E7%9A%84%E9%82%8F%E8%BC%AF%E7%A7%BB%E5%88%B0-presenter-%E5%8E%BB%E5%81%9A%E5%90%A7-1320250a3534</a></p>
+<p>RecyclerView侧滑</p>
+<p><a href="https://blog.csdn.net/jsonChumpKlutz/article/details/80563052" target="_blank" rel="noopener">https://blog.csdn.net/jsonChumpKlutz/article/details/80563052</a></p>
 
         
         </div>
@@ -558,7 +707,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/15/Android-Articles/" data-id="cjz6a1c4u0000553lf02uwjml" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/07/15/Android-Articles/" data-id="cjzlubr6r0002gtgoic67tuuq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -679,7 +828,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/15/IM/" data-id="cjz6a1c5g0009553ly5cjl8mz" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/07/15/IM/" data-id="cjzlubr7v000bgtgoncf62n90" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -800,7 +949,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/14/Ubuntu-Articles/" data-id="cjz6a1c5w000g553luhy4i7wq" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/07/14/Ubuntu-Articles/" data-id="cjzlubr83000jgtgonp9kaxh8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -921,7 +1070,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/14/Visual-Studio-Code-Articles/" data-id="cjz6a1c5y000h553la5lgp3gs" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/07/14/Visual-Studio-Code-Articles/" data-id="cjzlubr83000igtgothf5r88b" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1045,7 +1194,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/14/Docker-AOSP/" data-id="cjz6a1c590005553l5aohrctt" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/07/14/Docker-AOSP/" data-id="cjzlubr6k0000gtgowu2g5lst" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1178,6 +1327,41 @@
 <p>电子书</p>
 <p>book.flutterchina.club</p>
 <p><a href="https://medium.com/2dimensions/building-a-water-tracking-app-with-flare-flutter-f03de436dba3" target="_blank" rel="noopener">https://medium.com/2dimensions/building-a-water-tracking-app-with-flare-flutter-f03de436dba3</a></p>
+<p><a href="https://github.com/qq326646683/flutter_tencentplayer" target="_blank" rel="noopener">https://github.com/qq326646683/flutter_tencentplayer</a></p>
+<p>Flutter的原理及美团的实践</p>
+<p><a href="https://www.cnblogs.com/meituantech/p/9455091.html" target="_blank" rel="noopener">https://www.cnblogs.com/meituantech/p/9455091.html</a></p>
+<p>json处理</p>
+<p><a href="https://www.jianshu.com/p/3754d1370ccc" target="_blank" rel="noopener">https://www.jianshu.com/p/3754d1370ccc</a></p>
+<p><a href="https://cloud.tencent.com/developer/ask/184559" target="_blank" rel="noopener">https://cloud.tencent.com/developer/ask/184559</a></p>
+<p>Overflowed</p>
+<p><a href="https://blog.csdn.net/huangxiaoguo1/article/details/85335568" target="_blank" rel="noopener">https://blog.csdn.net/huangxiaoguo1/article/details/85335568</a></p>
+<p>常见错误</p>
+<p><a href="https://www.jianshu.com/p/650f4bca6e1e" target="_blank" rel="noopener">https://www.jianshu.com/p/650f4bca6e1e</a></p>
+<p>Navigator</p>
+<p><a href="https://juejin.im/post/5c3ed794f265da616b10f14e" target="_blank" rel="noopener">https://juejin.im/post/5c3ed794f265da616b10f14e</a></p>
+<p>Webview</p>
+<p><a href="http://www.coderzheaven.com/2019/03/24/using-webview-in-flutter/" target="_blank" rel="noopener">http://www.coderzheaven.com/2019/03/24/using-webview-in-flutter/</a></p>
+<p><a href="https://www.elasticfeed.com/c550d83907cf646b1f72c9579e00a349/" target="_blank" rel="noopener">https://www.elasticfeed.com/c550d83907cf646b1f72c9579e00a349/</a></p>
+<p>Flex</p>
+<p><a href="https://www.jianshu.com/p/64a0c23a0dee" target="_blank" rel="noopener">https://www.jianshu.com/p/64a0c23a0dee</a></p>
+<p>Flutter图片</p>
+<p><a href="https://www.jianshu.com/p/8810bacfe5d4" target="_blank" rel="noopener">https://www.jianshu.com/p/8810bacfe5d4</a></p>
+<p>Flutter获取屏幕宽高</p>
+<p><a href="https://www.jianshu.com/p/7914727000a5" target="_blank" rel="noopener">https://www.jianshu.com/p/7914727000a5</a></p>
+<p>Layout参考清单</p>
+<p><a href="https://medium.com/flutter-community/flutter-layout-cheat-sheet-5363348d037e" target="_blank" rel="noopener">https://medium.com/flutter-community/flutter-layout-cheat-sheet-5363348d037e</a></p>
+<p>Flow Layout</p>
+<p><a href="https://medium.com/flutter-community/advanced-flutter-layout-flow-32300bf3b7b3" target="_blank" rel="noopener">https://medium.com/flutter-community/advanced-flutter-layout-flow-32300bf3b7b3</a></p>
+<p>Layout官方教程</p>
+<p><a href="https://flutter.dev/docs/development/ui/layout" target="_blank" rel="noopener">https://flutter.dev/docs/development/ui/layout</a></p>
+<p>Flexable Expandable</p>
+<p><a href="https://blog.csdn.net/chunchun1230/article/details/82460257" target="_blank" rel="noopener">https://blog.csdn.net/chunchun1230/article/details/82460257</a></p>
+<p>Flutter与原生</p>
+<p><a href="https://www.jianshu.com/p/826098c33dff" target="_blank" rel="noopener">https://www.jianshu.com/p/826098c33dff</a></p>
+<p><a href="https://blog.csdn.net/Kinsomy/article/details/84935582" target="_blank" rel="noopener">https://blog.csdn.net/Kinsomy/article/details/84935582</a></p>
+<p><a href="https://www.jianshu.com/p/c5263a3d7aac" target="_blank" rel="noopener">https://www.jianshu.com/p/c5263a3d7aac</a></p>
+<p><a href="https://www.jianshu.com/p/ba21cecbdc0c" target="_blank" rel="noopener">https://www.jianshu.com/p/ba21cecbdc0c</a></p>
+<p><a href="https://www.jianshu.com/p/af8b337356e2" target="_blank" rel="noopener">https://www.jianshu.com/p/af8b337356e2</a></p>
 
         
         </div>
@@ -1188,7 +1372,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/14/Flutter-Articles/" data-id="cjz6a1c5c0007553l4lzh3qf8" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/07/14/Flutter-Articles/" data-id="cjzlubr7x000cgtgo244dejzj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1309,128 +1493,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/14/Android-Bizzare-Issues/" data-id="cjz6a1c520001553lh3mvkyip" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-youtube-dl" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2019/07/14/youtube-dl/">youtube-dl</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2019/07/14/youtube-dl/">
-            <time datetime="2019-07-14T11:44:07.000Z" itemprop="datePublished">2019-07-14</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>通过youtube-dl下载油管视频以及字幕</p>
-<p><a href="https://www.jianshu.com/p/6c666329c2d5" target="_blank" rel="noopener">https://www.jianshu.com/p/6c666329c2d5</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2019/07/14/youtube-dl/" data-id="cjz6a1c6d000m553ls2gtms4z" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/07/14/Android-Bizzare-Issues/" data-id="cjzlubr7g0004gtgodvbvof71" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1507,7 +1570,7 @@
 
 
     <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/">&laquo; Anterior</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Siguiente  &raquo;</a>
+        <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
 </section>
             
@@ -1516,9 +1579,28 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Recientes</h3>
+        <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/08/12/GithubPages/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2019/08/12/GithubPages/" class="title">GithubPages</a></p>
+                            <p class="item-date"><time datetime="2019-08-12T05:19:48.000Z" itemprop="datePublished">2019-08-12</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -1596,25 +1678,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/07/23/RxJava/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/07/23/RxJava/" class="title">RxJava</a></p>
-                            <p class="item-date"><time datetime="2019-07-22T23:56:49.000Z" itemprop="datePublished">2019-07-23</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1624,9 +1687,9 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Archivos</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -1637,7 +1700,7 @@
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">Links</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
                 
