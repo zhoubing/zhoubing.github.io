@@ -76,7 +76,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -95,10 +95,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Articles',
+            POSTS: 'Entradas',
             PAGES: 'Pages',
-            CATEGORIES: 'Catégories',
-            TAGS: 'Tags',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -129,7 +129,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
     </div>
 
                 </td>
@@ -149,16 +149,16 @@
             <h2 id="name">周兵</h2>
             <h3 id="title">Mobile Developer &amp; JavaScript</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Shenyang, China</span>
-            <a id="follow" target="_blank" href="https://github.com/zhoubing/">SUIVRE</a>
+            <a id="follow" target="_blank" href="https://github.com/zhoubing/">SEGUIR</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                37
-                <span>Articles</span>
+                42
+                <span>Entradas</span>
             </div>
             <div class="article-info-block">
                 0
-                <span>Tag</span>
+                <span>Etiqueta</span>
             </div>
         </div>
         
@@ -206,6 +206,641 @@
 
             
             <section id="main">
+    <article id="post-Kotlin" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019/08/11/Kotlin/">Kotlin</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019/08/11/Kotlin/">
+            <time datetime="2019-08-11T00:30:09.000Z" itemprop="datePublished">2019-08-11</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>Announcing Shark: Smart Heap Analysis Reports for Kotlin</p>
+<p><a href="https://developer.squareup.com/blog/announcing-shark-smart-heap-analysis-reports-for-kotlin/" target="_blank" rel="noopener">https://developer.squareup.com/blog/announcing-shark-smart-heap-analysis-reports-for-kotlin/</a></p>
+<p><a href="https://proandroiddev.com/kotlin-destructuring-declarations-46aad0ee5261" target="_blank" rel="noopener">https://proandroiddev.com/kotlin-destructuring-declarations-46aad0ee5261</a></p>
+<p><a href="https://developer.android.com/kotlin" target="_blank" rel="noopener">https://developer.android.com/kotlin</a></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2019/08/11/Kotlin/" data-id="ck1bg12s3000if93znxqrd06v" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-AndroidTV" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019/08/11/AndroidTV/">AndroidTV</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019/08/11/AndroidTV/">
+            <time datetime="2019-08-11T00:25:07.000Z" itemprop="datePublished">2019-08-11</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p><a href="https://github.com/ederdoski/SimpleRecommendationsAndroidTV" target="_blank" rel="noopener">https://github.com/ederdoski/SimpleRecommendationsAndroidTV</a></p>
+<p><a href="https://github.com/googlesamples/leanback-showcase" target="_blank" rel="noopener">https://github.com/googlesamples/leanback-showcase</a></p>
+<p><a href="https://github.com/pedrovgs/TuentiTV" target="_blank" rel="noopener">https://github.com/pedrovgs/TuentiTV</a></p>
+<p><a href="https://github.com/fasteque/leanback-extensions" target="_blank" rel="noopener">https://github.com/fasteque/leanback-extensions</a></p>
+<p><a href="https://github.com/hypeapps/episodie" target="_blank" rel="noopener">https://github.com/hypeapps/episodie</a></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2019/08/11/AndroidTV/" data-id="ck1bg12qw0003f93zz0zorsnx" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-Game" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019/08/08/Game/">Game</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019/08/08/Game/">
+            <time datetime="2019-08-07T23:20:39.000Z" itemprop="datePublished">2019-08-08</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>A C++ game similar to the game Zombies vs Plants with limited options</p>
+<p><a href="https://github.com/mhyousefi/ZombiesVsPlants" target="_blank" rel="noopener">https://github.com/mhyousefi/ZombiesVsPlants</a></p>
+<p><a href="https://github.com/S4ND1X/UnityProjects-ZombiesVSPlants" target="_blank" rel="noopener">https://github.com/S4ND1X/UnityProjects-ZombiesVSPlants</a></p>
+<p><a href="https://github.com/MoreWayne/ZombiesVsPlants" target="_blank" rel="noopener">https://github.com/MoreWayne/ZombiesVsPlants</a></p>
+<p><a href="https://www.willusher.io/pages/sdl2/" target="_blank" rel="noopener">https://www.willusher.io/pages/sdl2/</a></p>
+<p><a href="http://gigi.nullneuron.net/gigilabs/animations-with-sprite-sheets-in-sdl2/" target="_blank" rel="noopener">http://gigi.nullneuron.net/gigilabs/animations-with-sprite-sheets-in-sdl2/</a></p>
+<p><a href="https://blog.csdn.net/furzoom/article/details/53992124" target="_blank" rel="noopener">https://blog.csdn.net/furzoom/article/details/53992124</a></p>
+<p><a href="https://blog.csdn.net/u011086331/article/details/91344258" target="_blank" rel="noopener">https://blog.csdn.net/u011086331/article/details/91344258</a></p>
+<p>游戏开发视频</p>
+<p><a href="https://www.youtube.com/brackeys/" target="_blank" rel="noopener">https://www.youtube.com/brackeys/</a></p>
+<p><a href="https://www.youtube.com/results?search_query=unity+2d+tutorial" target="_blank" rel="noopener">https://www.youtube.com/results?search_query=unity+2d+tutorial</a></p>
+<p><a href="https://www.youtube.com/channel/UCUkRj4qoT1bsWpE_C8lZYoQ" target="_blank" rel="noopener">https://www.youtube.com/channel/UCUkRj4qoT1bsWpE_C8lZYoQ</a></p>
+<p>好用的库</p>
+<p><a href="https://libgdx.badlogicgames.com/" target="_blank" rel="noopener">https://libgdx.badlogicgames.com/</a></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2019/08/08/Game/" data-id="ck1bg12rq000cf93zn3gnmvfy" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-RxJava" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019/07/23/RxJava/">RxJava</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019/07/23/RxJava/">
+            <time datetime="2019-07-22T23:56:49.000Z" itemprop="datePublished">2019-07-23</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>拥抱RxJava</p>
+<p><a href="https://juejin.im/post/590b398eac502e00582bc616" target="_blank" rel="noopener">https://juejin.im/post/590b398eac502e00582bc616</a></p>
+<p><a href="https://www.cnblogs.com/liulipeng/p/5050353.html" target="_blank" rel="noopener">https://www.cnblogs.com/liulipeng/p/5050353.html</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1381591" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1381591</a></p>
+<p><a href="https://juejin.im/post/59083e4da22b9d0065f2f5ea" target="_blank" rel="noopener">https://juejin.im/post/59083e4da22b9d0065f2f5ea</a></p>
+<p><a href="https://www.jianshu.com/p/ec54f91f0ed2?from=singlemessage" target="_blank" rel="noopener">https://www.jianshu.com/p/ec54f91f0ed2?from=singlemessage</a></p>
+<p><a href="https://www.jianshu.com/p/d2df6bceeff9" target="_blank" rel="noopener">https://www.jianshu.com/p/d2df6bceeff9</a></p>
+<p><a href="https://www.jianshu.com/p/61631134498e" target="_blank" rel="noopener">https://www.jianshu.com/p/61631134498e</a></p>
+<p><a href="https://www.jianshu.com/p/42d77c577ff4" target="_blank" rel="noopener">https://www.jianshu.com/p/42d77c577ff4</a></p>
+<p><a href="https://proandroiddev.com/eager-vs-lazy-in-rxjava-cf077b4757ba" target="_blank" rel="noopener">https://proandroiddev.com/eager-vs-lazy-in-rxjava-cf077b4757ba</a></p>
+<p><a href="https://proandroiddev.com/unit-tests-with-dagger2-retrofit2-rxjava2-and-mockk-android-1c268fa77957" target="_blank" rel="noopener">https://proandroiddev.com/unit-tests-with-dagger2-retrofit2-rxjava2-and-mockk-android-1c268fa77957</a></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2019/07/23/RxJava/" data-id="ck1bg12se000qf93zh7ne6om4" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-Dart" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019/07/18/Dart/">Dart</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019/07/18/Dart/">
+            <time datetime="2019-07-18T07:54:47.000Z" itemprop="datePublished">2019-07-18</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>Dart</p>
+<p><a href="https://dartcn.com/guides/language/language-tour#异步支持" target="_blank" rel="noopener">https://dartcn.com/guides/language/language-tour#%E5%BC%82%E6%AD%A5%E6%94%AF%E6%8C%81</a></p>
+<p>Dart Sass</p>
+<p><a href="https://sass-lang.com/dart-sass" target="_blank" rel="noopener">https://sass-lang.com/dart-sass</a></p>
+<p>语言规范</p>
+<p><a href="https://dart.dev/guides/language/spec" target="_blank" rel="noopener">https://dart.dev/guides/language/spec</a></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2019/07/18/Dart/" data-id="ck1bg12rc0007f93zeufrydes" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-Lottie" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -250,7 +885,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/15/Lottie/" data-id="ck17l4wof000hgcgp21r4wpe0" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2019/07/15/Lottie/" data-id="ck1bg12s6000kf93z07bo1tx2" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -373,7 +1008,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/15/Android-RecyclerView/" data-id="ck17l4wns0002gcgpeq669upd" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2019/07/15/Android-RecyclerView/" data-id="ck1bg12qt0002f93znvl22pm3" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -497,7 +1132,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/15/Jetbrains-IDE/" data-id="ck17l4woc000egcgpw6h52u16" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2019/07/15/Jetbrains-IDE/" data-id="ck1bg12ry000gf93zka5vx9n2" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -618,7 +1253,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/15/Swift/" data-id="ck17l4wom000ogcgp75n5kft0" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2019/07/15/Swift/" data-id="ck1bg12sh000tf93zdzgo074w" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -747,713 +1382,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/15/Youtube-List/" data-id="ck17l4wor000sgcgprqepyt8e" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Docker-Articles" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2019/07/15/Docker-Articles/">Docker Articles</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2019/07/15/Docker-Articles/">
-            <time datetime="2019-07-15T02:06:04.000Z" itemprop="datePublished">2019-07-15</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p><a href="https://www.cnblogs.com/klvchen/p/11015267.html" target="_blank" rel="noopener">https://www.cnblogs.com/klvchen/p/11015267.html</a></p>
-<p><a href="https://www.liangzl.com/get-article-detail-13599.html" target="_blank" rel="noopener">https://www.liangzl.com/get-article-detail-13599.html</a></p>
-<p><a href="https://www.cnblogs.com/5bug/p/8506085.html" target="_blank" rel="noopener">https://www.cnblogs.com/5bug/p/8506085.html</a></p>
-<p>写给前端的Docker实战</p>
-<p><a href="https://segmentfault.com/a/1190000020510678" target="_blank" rel="noopener">https://segmentfault.com/a/1190000020510678</a></p>
-<p>Mac安装Docker</p>
-<p><a href="https://www.jianshu.com/p/9142187552db" target="_blank" rel="noopener">https://www.jianshu.com/p/9142187552db</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2019/07/15/Docker-Articles/" data-id="ck17l4wo20008gcgpmxn8zh2s" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Android-Articles" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2019/07/15/Android-Articles/">Android Articles</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2019/07/15/Android-Articles/">
-            <time datetime="2019-07-15T02:05:17.000Z" itemprop="datePublished">2019-07-15</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p><a href="https://www.raywenderlich.com/3658341-picasso-tutorial-for-android-getting-started" target="_blank" rel="noopener">https://www.raywenderlich.com/3658341-picasso-tutorial-for-android-getting-started</a></p>
-<p>Android Studio Tips And Tricks</p>
-<p><a href="https://www.raywenderlich.com/2807578-android-studio-tips-and-tricks#toc-anchor-021" target="_blank" rel="noopener">https://www.raywenderlich.com/2807578-android-studio-tips-and-tricks#toc-anchor-021</a></p>
-<p>GETTING STARTED WITH ANDROID CANVAS DRAWING</p>
-<p><a href="https://riggaroo.co.za/getting-started-with-android-canvas-drawing/" target="_blank" rel="noopener">https://riggaroo.co.za/getting-started-with-android-canvas-drawing/</a></p>
-<p>parcelize</p>
-<p><a href="https://blog.stylingandroid.com/parcelize/" target="_blank" rel="noopener">https://blog.stylingandroid.com/parcelize/</a></p>
-<p>Going edge-to-edge with Gesture Navigation</p>
-<p><a href="https://chris.banes.dev/talks/2019/going-edge-to-edge-berlin/" target="_blank" rel="noopener">https://chris.banes.dev/talks/2019/going-edge-to-edge-berlin/</a></p>
-<p><a href="https://blog.karumi.com/tag/property-based-testing/" target="_blank" rel="noopener">https://blog.karumi.com/tag/property-based-testing/</a></p>
-<p>AndroidX 版本对照表</p>
-<p><a href="https://developer.android.com/jetpack/androidx/versions" target="_blank" rel="noopener">https://developer.android.com/jetpack/androidx/versions</a></p>
-<p>官方架构指南</p>
-<p><a href="https://developer.android.com/jetpack/docs/guide" target="_blank" rel="noopener">https://developer.android.com/jetpack/docs/guide</a></p>
-<p><a href="https://github.com/googlesamples/android-architecture" target="_blank" rel="noopener">https://github.com/googlesamples/android-architecture</a></p>
-<p>图像压缩相关</p>
-<p><a href="https://cloud.tencent.com/developer/article/1071001" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1071001</a></p>
-<p><a href="https://blog.csdn.net/liaoinstan/article/details/49000563" target="_blank" rel="noopener">https://blog.csdn.net/liaoinstan/article/details/49000563</a></p>
-<p><a href="https://www.jianshu.com/p/3ac26611bc0d" target="_blank" rel="noopener">https://www.jianshu.com/p/3ac26611bc0d</a></p>
-<p><a href="https://blog.csdn.net/xige1995/article/details/84566764" target="_blank" rel="noopener">https://blog.csdn.net/xige1995/article/details/84566764</a></p>
-<p><a href="https://blog.csdn.net/u012121105/article/details/78325449" target="_blank" rel="noopener">https://blog.csdn.net/u012121105/article/details/78325449</a></p>
-<p><a href="https://blog.csdn.net/wangguan_9527/article/details/82051463" target="_blank" rel="noopener">https://blog.csdn.net/wangguan_9527/article/details/82051463</a></p>
-<p><a href="https://blog.csdn.net/infsafe/article/details/7744582" target="_blank" rel="noopener">https://blog.csdn.net/infsafe/article/details/7744582</a></p>
-<p><a href="https://www.cnblogs.com/zhujiabin/p/8351950.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhujiabin/p/8351950.html</a></p>
-<p><a href="https://blog.csdn.net/xiayiye5/article/details/86139988" target="_blank" rel="noopener">https://blog.csdn.net/xiayiye5/article/details/86139988</a></p>
-<p><a href="https://blog.csdn.net/liaoinstan/article/details/49000563" target="_blank" rel="noopener">https://blog.csdn.net/liaoinstan/article/details/49000563</a></p>
-<p>A Little Thing about Android Module Paths</p>
-<p><a href="https://medium.com/androiddevelopers/gradle-path-configuration-dc523f0ed25c" target="_blank" rel="noopener">https://medium.com/androiddevelopers/gradle-path-configuration-dc523f0ed25c</a></p>
-<p>Gesture Navigation: Going edge-to-edge</p>
-<p><a href="https://medium.com/androiddevelopers/gesture-navigation-going-edge-to-edge-812f62e4e83e" target="_blank" rel="noopener">https://medium.com/androiddevelopers/gesture-navigation-going-edge-to-edge-812f62e4e83e</a></p>
-<p>Exploring App Actions on Android: What are App Actions?</p>
-<p><a href="https://joebirch.co/2019/07/16/exploring-app-actions-on-android-what-are-app-actions/" target="_blank" rel="noopener">https://joebirch.co/2019/07/16/exploring-app-actions-on-android-what-are-app-actions/</a></p>
-<p>Databases on Android with Anko and Kotlin: SQLite never was so easy (KAD 25)</p>
-<p><a href="https://antonioleiva.com/databases-anko-kotlin/" target="_blank" rel="noopener">https://antonioleiva.com/databases-anko-kotlin/</a></p>
-<p>What’s New in Kotlin 1.3</p>
-<p><a href="https://www.raywenderlich.com/3871338-what-s-new-in-kotlin-1-3" target="_blank" rel="noopener">https://www.raywenderlich.com/3871338-what-s-new-in-kotlin-1-3</a></p>
-<p>Android Tutorial for GeckoView: Getting Started</p>
-<p><a href="https://www.raywenderlich.com/1381698-android-tutorial-for-geckoview-getting-started" target="_blank" rel="noopener">https://www.raywenderlich.com/1381698-android-tutorial-for-geckoview-getting-started</a></p>
-<p>Objects in Kotlin: Create safe singletons in one line of code (KAD 27)</p>
-<p><a href="https://antonioleiva.com/objects-kotlin/" target="_blank" rel="noopener">https://antonioleiva.com/objects-kotlin/</a></p>
-<p>Kotlin: Destructuring Declarations</p>
-<p><a href="https://proandroiddev.com/kotlin-destructuring-declarations-46aad0ee5261" target="_blank" rel="noopener">https://proandroiddev.com/kotlin-destructuring-declarations-46aad0ee5261</a></p>
-<p><a href="https://androidweekly.net/issues/issue-373" target="_blank" rel="noopener">https://androidweekly.net/issues/issue-373</a></p>
-<p><a href="https://androidweekly.net/issues/issue-374" target="_blank" rel="noopener">https://androidweekly.net/issues/issue-374</a></p>
-<p>Android6.0系统悬浮窗权限的问题解决方法</p>
-<p><a href="https://www.jianshu.com/p/529755edc3c5" target="_blank" rel="noopener">https://www.jianshu.com/p/529755edc3c5</a></p>
-<p>Android Kotlin Clean Architecture</p>
-<p><a href="https://github.com/bachhoan88/CleanArchitecture" target="_blank" rel="noopener">https://github.com/bachhoan88/CleanArchitecture</a></p>
-<p>Testing Koin applications with KotlinTest</p>
-<p><a href="https://dev.to/kerooker/testing-koin-applications-with-kotlintest-1iip" target="_blank" rel="noopener">https://dev.to/kerooker/testing-koin-applications-with-kotlintest-1iip</a></p>
-<p><a href="https://proandroiddev.com/making-android-lint-theme-aware-6285737b13bc" target="_blank" rel="noopener">https://proandroiddev.com/making-android-lint-theme-aware-6285737b13bc</a></p>
-<p>Clean Architecture Tutorial for Android: Getting Started</p>
-<p><a href="https://www.raywenderlich.com/3595916-clean-architecture-tutorial-for-android-getting-started" target="_blank" rel="noopener">https://www.raywenderlich.com/3595916-clean-architecture-tutorial-for-android-getting-started</a></p>
-<p><a href="https://medium.com/over-engineering/android-canvas-drawing-useful-graphics-classes-operations-2803e435e848" target="_blank" rel="noopener">https://medium.com/over-engineering/android-canvas-drawing-useful-graphics-classes-operations-2803e435e848</a></p>
-<p><a href="https://medium.com/androiddevelopers/gesture-navigation-going-edge-to-edge-812f62e4e83e" target="_blank" rel="noopener">https://medium.com/androiddevelopers/gesture-navigation-going-edge-to-edge-812f62e4e83e</a></p>
-<p><a href="https://medium.com/androiddevelopers/gesture-navigation-handling-visual-overlaps-4aed565c134c" target="_blank" rel="noopener">https://medium.com/androiddevelopers/gesture-navigation-handling-visual-overlaps-4aed565c134c</a></p>
-<p><a href="https://medium.com/snapp-mobile/experimenting-with-motion-in-android-9283962ae0ef" target="_blank" rel="noopener">https://medium.com/snapp-mobile/experimenting-with-motion-in-android-9283962ae0ef</a></p>
-<p><a href="https://medium.com/androiddevelopers/now-in-android-episode-1-5e8082173595" target="_blank" rel="noopener">https://medium.com/androiddevelopers/now-in-android-episode-1-5e8082173595</a></p>
-<p>fragment</p>
-<p><a href="https://developer.android.com/jetpack/androidx/releases/fragment#1.2.0-alpha02" target="_blank" rel="noopener">https://developer.android.com/jetpack/androidx/releases/fragment#1.2.0-alpha02</a></p>
-<p>Android Compose</p>
-<p><a href="http://intelligiblebabble.com/compose-from-first-principles/" target="_blank" rel="noopener">http://intelligiblebabble.com/compose-from-first-principles/</a></p>
-<p><a href="https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/ui/README.md" target="_blank" rel="noopener">https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/ui/README.md</a></p>
-<p><a href="https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/compose/README.md" target="_blank" rel="noopener">https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/compose/README.md</a></p>
-<p><a href="https://material.io/design/material-studies/rally.html#typography" target="_blank" rel="noopener">https://material.io/design/material-studies/rally.html#typography</a></p>
-<p>Android Jetpack</p>
-<p><a href="https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/README.md" target="_blank" rel="noopener">https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/README.md</a></p>
-<p>AndroidX 对比表</p>
-<p><a href="https://www.jianshu.com/p/5ff650460161" target="_blank" rel="noopener">https://www.jianshu.com/p/5ff650460161</a></p>
-<p>ConstraintLayout</p>
-<p><a href="https://blog.csdn.net/jxb196203/article/details/80695410" target="_blank" rel="noopener">https://blog.csdn.net/jxb196203/article/details/80695410</a></p>
-<p><a href="https://www.jianshu.com/p/578c92a3839b" target="_blank" rel="noopener">https://www.jianshu.com/p/578c92a3839b</a></p>
-<p><a href="https://blog.csdn.net/ccw0054/article/details/79554946" target="_blank" rel="noopener">https://blog.csdn.net/ccw0054/article/details/79554946</a></p>
-<p><a href="https://www.niwoxuexi.com/blog/android00/article/268.html" target="_blank" rel="noopener">https://www.niwoxuexi.com/blog/android00/article/268.html</a></p>
-<p><a href="https://www.jianshu.com/p/b884b8c46584" target="_blank" rel="noopener">https://www.jianshu.com/p/b884b8c46584</a></p>
-<p><a href="https://www.jianshu.com/p/16e95b6b5e38" target="_blank" rel="noopener">https://www.jianshu.com/p/16e95b6b5e38</a></p>
-<p>BottomDialog</p>
-<p><a href="https://www.jianshu.com/p/e1d2cc82e756" target="_blank" rel="noopener">https://www.jianshu.com/p/e1d2cc82e756</a></p>
-<p>ToolBar</p>
-<p><a href="https://www.jianshu.com/p/c35fb8bda4d8" target="_blank" rel="noopener">https://www.jianshu.com/p/c35fb8bda4d8</a></p>
-<p><a href="https://www.jianshu.com/p/05ef48b777cc" target="_blank" rel="noopener">https://www.jianshu.com/p/05ef48b777cc</a></p>
-<p><a href="https://www.jianshu.com/p/617be02dc265" target="_blank" rel="noopener">https://www.jianshu.com/p/617be02dc265</a></p>
-<p>RecyclerView解耦</p>
-<p><a href="https://medium.com/verybuy-dev/recyclerview-in-mvp-把-viewholder-的邏輯移到-presenter-去做吧-1320250a3534" target="_blank" rel="noopener">https://medium.com/verybuy-dev/recyclerview-in-mvp-%E6%8A%8A-viewholder-%E7%9A%84%E9%82%8F%E8%BC%AF%E7%A7%BB%E5%88%B0-presenter-%E5%8E%BB%E5%81%9A%E5%90%A7-1320250a3534</a></p>
-<p>RecyclerView侧滑</p>
-<p><a href="https://blog.csdn.net/jsonChumpKlutz/article/details/80563052" target="_blank" rel="noopener">https://blog.csdn.net/jsonChumpKlutz/article/details/80563052</a></p>
-<p>更新</p>
-<p><a href="https://github.com/teprinciple/UpdateAppUtils" target="_blank" rel="noopener">https://github.com/teprinciple/UpdateAppUtils</a></p>
-<p>图片查看</p>
-<p><a href="https://github.com/stfalcon-studio/StfalconImageViewer" target="_blank" rel="noopener">https://github.com/stfalcon-studio/StfalconImageViewer</a></p>
-<p>Espresso辅助库</p>
-<p><a href="https://github.com/americanexpress/busybee" target="_blank" rel="noopener">https://github.com/americanexpress/busybee</a></p>
-<p>Image Loading</p>
-<p><a href="https://github.com/coil-kt/coil" target="_blank" rel="noopener">https://github.com/coil-kt/coil</a></p>
-<p>DBtools</p>
-<p><a href="https://github.com/jeffdcamp/dbtools-room" target="_blank" rel="noopener">https://github.com/jeffdcamp/dbtools-room</a></p>
-<p>Canvas</p>
-<p><a href="https://jimbaca.com/what-is-canvas-in-android/" target="_blank" rel="noopener">https://jimbaca.com/what-is-canvas-in-android/</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2019/07/15/Android-Articles/" data-id="ck17l4wnd0000gcgp0ls4qlth" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-IM" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2019/07/15/IM/">IM</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2019/07/15/IM/">
-            <time datetime="2019-07-15T02:00:24.000Z" itemprop="datePublished">2019-07-15</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>golang写的IM服务器</p>
-<p><a href="https://github.com/alberliu/goim" target="_blank" rel="noopener">https://github.com/alberliu/goim</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2019/07/15/IM/" data-id="ck17l4wo9000cgcgp1h9amtbx" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Ubuntu-Articles" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2019/07/14/Ubuntu-Articles/">Ubuntu Articles</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2019/07/14/Ubuntu-Articles/">
-            <time datetime="2019-07-14T14:04:04.000Z" itemprop="datePublished">2019-07-14</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>Ubuntu Server + Unity</p>
-<p><a href="https://v2ex.com/t/452259" target="_blank" rel="noopener">https://v2ex.com/t/452259</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2019/07/14/Ubuntu-Articles/" data-id="ck17l4won000pgcgpk5uz5zwy" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Visual-Studio-Code-Articles" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2019/07/14/Visual-Studio-Code-Articles/">Visual Studio Code Articles</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2019/07/14/Visual-Studio-Code-Articles/">
-            <time datetime="2019-07-14T14:03:23.000Z" itemprop="datePublished">2019-07-14</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>Developing in WSL</p>
-<p><a href="https://code.visualstudio.com/docs/remote/wsl" target="_blank" rel="noopener">https://code.visualstudio.com/docs/remote/wsl</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2019/07/14/Visual-Studio-Code-Articles/" data-id="ck17l4wop000qgcgp5zw4lga5" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2019/07/15/Youtube-List/" data-id="ck1bg12sm000xf93z139x09xe" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1530,7 +1459,7 @@
 
 
     <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/2/">&laquo; Préc</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Suiv &raquo;</a>
+        <a class="extend prev" rel="prev" href="/page/2/">&laquo; Anterior</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Siguiente  &raquo;</a>
     </nav>
 </section>
             
@@ -1539,14 +1468,14 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Récents</h3>
+        <h3 class="widget-title">Recientes</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2019/10/01/抓包/" class="thumbnail">
+                            <a href="/2019/10/04/Java/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1557,15 +1486,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/10/01/抓包/" class="title">抓包</a></p>
-                            <p class="item-date"><time datetime="2019-10-01T08:33:06.000Z" itemprop="datePublished">2019-10-01</time></p>
+                            <p class="item-title"><a href="/2019/10/04/Java/" class="title">Java</a></p>
+                            <p class="item-date"><time datetime="2019-10-04T01:20:49.000Z" itemprop="datePublished">2019-10-04</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2019/09/30/方舟编译器/" class="thumbnail">
+                            <a href="/2019/10/03/Server/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1576,15 +1505,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/09/30/方舟编译器/" class="title">方舟编译器</a></p>
-                            <p class="item-date"><time datetime="2019-09-30T13:29:13.000Z" itemprop="datePublished">2019-09-30</time></p>
+                            <p class="item-title"><a href="/2019/10/03/Server/" class="title">Server</a></p>
+                            <p class="item-date"><time datetime="2019-10-03T14:41:41.000Z" itemprop="datePublished">2019-10-03</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2019/09/30/MongoDB/" class="thumbnail">
+                            <a href="/2019/10/02/OpenResty/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1595,15 +1524,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/09/30/MongoDB/" class="title">MongoDB</a></p>
-                            <p class="item-date"><time datetime="2019-09-29T23:05:11.000Z" itemprop="datePublished">2019-09-30</time></p>
+                            <p class="item-title"><a href="/2019/10/02/OpenResty/" class="title">OpenResty</a></p>
+                            <p class="item-date"><time datetime="2019-10-02T04:31:37.000Z" itemprop="datePublished">2019-10-02</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2019/09/30/Python/" class="thumbnail">
+                            <a href="/2019/10/02/Spring/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1614,15 +1543,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/09/30/Python/" class="title">Python</a></p>
-                            <p class="item-date"><time datetime="2019-09-29T23:03:02.000Z" itemprop="datePublished">2019-09-30</time></p>
+                            <p class="item-title"><a href="/2019/10/02/Spring/" class="title">Spring</a></p>
+                            <p class="item-date"><time datetime="2019-10-02T00:17:37.000Z" itemprop="datePublished">2019-10-02</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2019/09/30/Clojure/" class="thumbnail">
+                            <a href="/2019/10/01/Bash/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1633,8 +1562,8 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/09/30/Clojure/" class="title">Clojure</a></p>
-                            <p class="item-date"><time datetime="2019-09-29T22:41:15.000Z" itemprop="datePublished">2019-09-30</time></p>
+                            <p class="item-title"><a href="/2019/10/01/Bash/" class="title">Bash</a></p>
+                            <p class="item-date"><time datetime="2019-10-01T10:48:47.000Z" itemprop="datePublished">2019-10-01</time></p>
                         </div>
                     </li>
                 
@@ -1647,9 +1576,9 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Archives</h3>
+        <h3 class="widget-title">Archivos</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -1660,7 +1589,7 @@
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">Liens</h3>
+        <h3 class="widget-title">Links</h3>
         <div class="widget">
             <ul>
                 
