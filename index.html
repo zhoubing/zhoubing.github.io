@@ -76,7 +76,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -95,10 +95,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Entradas',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Categorias',
-            TAGS: 'Etiquetas',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -129,7 +129,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -149,16 +149,16 @@
             <h2 id="name">周兵</h2>
             <h3 id="title">Mobile Developer &amp; JavaScript</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Shenyang, China</span>
-            <a id="follow" target="_blank" href="https://github.com/zhoubing/">SEGUIR</a>
+            <a id="follow" target="_blank" href="https://github.com/zhoubing/">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                43
-                <span>Entradas</span>
+                44
+                <span>posts</span>
             </div>
             <div class="article-info-block">
                 0
-                <span>Etiqueta</span>
+                <span>tag</span>
             </div>
         </div>
         
@@ -206,6 +206,130 @@
 
             
             <section id="main">
+    <article id="post-Linux-Distro" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019/10/20/Linux-Distro/">Linux Distro</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019/10/20/Linux-Distro/">
+            <time datetime="2019-10-20T15:26:04.000Z" itemprop="datePublished">2019-10-20</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p><a href="https://medium.com/@lhennessy/psychedelic-awesome-wm-on-arch-linux-6f8dc053a133" target="_blank" rel="noopener">https://medium.com/@lhennessy/psychedelic-awesome-wm-on-arch-linux-6f8dc053a133</a></p>
+<p><a href="https://blog.csdn.net/minghe_uestc/article/details/7489157" target="_blank" rel="noopener">https://blog.csdn.net/minghe_uestc/article/details/7489157</a></p>
+<p><a href="https://forum.suse.org.cn/t/awesome/2047" target="_blank" rel="noopener">https://forum.suse.org.cn/t/awesome/2047</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1390999" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1390999</a></p>
+<p><a href="https://www.youtube.com/results?search_query=awesome+i3" target="_blank" rel="noopener">https://www.youtube.com/results?search_query=awesome+i3</a></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2019/10/20/Linux-Distro/" data-id="ck1zl3xv7000j2ejfm5pz04qo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-Youtube" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -286,7 +410,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/10/05/Youtube/" data-id="ck1h1ihui000yo3gog6sj5aha" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/10/05/Youtube/" data-id="ck1zl3xvs00102ejfxu4pbv2g" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -402,6 +526,8 @@
 <p><a href="https://github.com/frank-lam/fullstack-tutorial" target="_blank" rel="noopener">https://github.com/frank-lam/fullstack-tutorial</a></p>
 <p><a href="https://github.com/zhongfucheng3y/3y" target="_blank" rel="noopener">https://github.com/zhongfucheng3y/3y</a></p>
 <p><a href="https://github.com/biezhi/java-bible" target="_blank" rel="noopener">https://github.com/biezhi/java-bible</a></p>
+<p>2019年中国Java发展趋势报告</p>
+<p><a href="https://www.infoq.cn/article/WomHORGulYaYEDYwoiP8" target="_blank" rel="noopener">https://www.infoq.cn/article/WomHORGulYaYEDYwoiP8</a></p>
 
         
         </div>
@@ -412,7 +538,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/10/04/Java/" data-id="ck1h1ihu3000ho3go63oqxycw" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/10/04/Java/" data-id="ck1zl3xv2000f2ejf8mhv25xw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -533,7 +659,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/10/03/Server/" data-id="ck1h1ihuc000ro3goj0ybigoy" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/10/03/Server/" data-id="ck1zl3xve000r2ejf7r2xnvs1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -655,7 +781,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/10/02/OpenResty/" data-id="ck1h1ihua000oo3godxl6pni7" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/10/02/OpenResty/" data-id="ck1zl3xva000m2ejfzzle2us3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -796,7 +922,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/10/02/Spring/" data-id="ck1h1ihud000so3goas4xjlqt" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/10/02/Spring/" data-id="ck1zl3xvh000t2ejfhimo3uyu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -917,7 +1043,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/10/01/Bash/" data-id="ck1h1ihtk0004o3gobabsnibs" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/10/01/Bash/" data-id="ck1zl3xu100032ejfzx1mmj1j" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1039,7 +1165,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/10/01/抓包/" data-id="ck1h1ihum0013o3gotx4zdisu" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/10/01/抓包/" data-id="ck1zl3xvt00122ejfffc0me9r" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1163,7 +1289,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/09/30/方舟编译器/" data-id="ck1h1ihuo0015o3goltxjh3by" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/09/30/方舟编译器/" data-id="ck1zl3xvy00172ejfro71n2er" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1287,148 +1413,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/09/30/MongoDB/" data-id="ck1h1ihu8000mo3go73160wau" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Python" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2019/09/30/Python/">Python</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2019/09/30/Python/">
-            <time datetime="2019-09-29T23:03:02.000Z" itemprop="datePublished">2019-09-30</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>Python MongoDB GridFS</p>
-<p><a href="https://blog.csdn.net/qq_27378621/article/details/88681871" target="_blank" rel="noopener">https://blog.csdn.net/qq_27378621/article/details/88681871</a></p>
-<p><a href="https://blog.csdn.net/qq_23926575/article/details/79271436" target="_blank" rel="noopener">https://blog.csdn.net/qq_23926575/article/details/79271436</a></p>
-<p><a href="https://blog.csdn.net/qq_23926575/article/details/79184055" target="_blank" rel="noopener">https://blog.csdn.net/qq_23926575/article/details/79184055</a></p>
-<p><a href="https://blog.csdn.net/A873054267/article/details/83788430" target="_blank" rel="noopener">https://blog.csdn.net/A873054267/article/details/83788430</a></p>
-<p><a href="https://www.cnblogs.com/lpfuture/p/4664149.html" target="_blank" rel="noopener">https://www.cnblogs.com/lpfuture/p/4664149.html</a></p>
-<p><a href="http://www.dataguru.cn/thread-501088-1-1.html" target="_blank" rel="noopener">http://www.dataguru.cn/thread-501088-1-1.html</a></p>
-<p><a href="https://www.jianshu.com/p/a70723751ca6" target="_blank" rel="noopener">https://www.jianshu.com/p/a70723751ca6</a></p>
-<p><a href="https://blog.csdn.net/xiaoyw71/article/details/100557807" target="_blank" rel="noopener">https://blog.csdn.net/xiaoyw71/article/details/100557807</a></p>
-<p>python-prompt-toolkit</p>
-<p><a href="https://python-prompt-toolkit.readthedocs.io/en/master/pages/tutorials/index.html" target="_blank" rel="noopener">https://python-prompt-toolkit.readthedocs.io/en/master/pages/tutorials/index.html</a></p>
-<p><a href="https://www.cnblogs.com/enncloudcn/p/6934705.html" target="_blank" rel="noopener">https://www.cnblogs.com/enncloudcn/p/6934705.html</a></p>
-<p>视频教程</p>
-<p><a href="https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg" target="_blank" rel="noopener">https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg</a></p>
-<p>BeautifulSoup</p>
-<p><a href="https://www.jianshu.com/p/ffdd0c2dc8f0" target="_blank" rel="noopener">https://www.jianshu.com/p/ffdd0c2dc8f0</a></p>
-<p>微软的Python视频教程</p>
-<p><a href="https://mp.weixin.qq.com/s/wTFlJmgAFTW_lJeufc9fgw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/wTFlJmgAFTW_lJeufc9fgw</a></p>
-<p>爬虫</p>
-<p><a href="https://www.cnblogs.com/huangguifeng/p/7635512.html" target="_blank" rel="noopener">https://www.cnblogs.com/huangguifeng/p/7635512.html</a></p>
-<p><a href="https://www.cnblogs.com/derek1184405959/p/8448875.html" target="_blank" rel="noopener">https://www.cnblogs.com/derek1184405959/p/8448875.html</a></p>
-<p><a href="https://www.cnblogs.com/tinghai8/p/9051513.html" target="_blank" rel="noopener">https://www.cnblogs.com/tinghai8/p/9051513.html</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2019/09/30/Python/" data-id="ck1h1ihub000po3go9qbjyf57" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2019/09/30/MongoDB/" data-id="ck1zl3xv8000k2ejfe62you8x" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1505,7 +1490,7 @@
 
 
     <nav id="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Siguiente  &raquo;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
 </section>
             
@@ -1514,9 +1499,28 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Recientes</h3>
+        <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/10/20/Linux-Distro/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2019/10/20/Linux-Distro/" class="title">Linux Distro</a></p>
+                            <p class="item-date"><time datetime="2019-10-20T15:26:04.000Z" itemprop="datePublished">2019-10-20</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -1594,25 +1598,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/10/02/Spring/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/10/02/Spring/" class="title">Spring</a></p>
-                            <p class="item-date"><time datetime="2019-10-02T00:17:37.000Z" itemprop="datePublished">2019-10-02</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1622,9 +1607,9 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Archivos</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -1635,7 +1620,7 @@
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">Links</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
                 
