@@ -153,7 +153,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                44
+                45
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -206,6 +206,142 @@
 
             
             <section id="main">
+    <article id="post-Docker" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019/09/11/Docker/">Docker</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019/09/11/Docker/">
+            <time datetime="2019-09-11T03:04:31.000Z" itemprop="datePublished">2019-09-11</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>安装docker</p>
+<p>sudo apt-get install docker.io</p>
+<p>获取镜像</p>
+<p>docker pull ubuntu:14.04</p>
+<p>查看本机存在哪些镜像</p>
+<p>docker images</p>
+<p>导出容器</p>
+<p>docker export $container_id &gt; 容器快照名.tar</p>
+<p>导入容器</p>
+<p>docker </p>
+<p>清理空间</p>
+<p>docker system df</p>
+<p>docker system prune</p>
+<p>安装</p>
+<p><a href="https://blog.csdn.net/u010889616/article/details/80170767" target="_blank" rel="noopener">https://blog.csdn.net/u010889616/article/details/80170767</a></p>
+<p><a href="https://www.daocloud.io/mirror" target="_blank" rel="noopener">https://www.daocloud.io/mirror</a></p>
+<p>用户名密码zhoubing Abc123456</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2019/09/11/Docker/" data-id="ck23qkxgz000aehje39e90tin" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-GithubPages" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -256,7 +392,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/08/12/GithubPages/" data-id="ck1zl3xuy000d2ejfkt6srhr5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2019/08/12/GithubPages/" data-id="ck23qkxh7000eehje6shqfkyh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -376,7 +512,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/08/11/iOS/" data-id="ck1zl3xvs00112ejfs20ofcur" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2019/08/11/iOS/" data-id="ck23qkxi30014ehjem87rru37" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -499,7 +635,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/08/11/Kotlin/" data-id="ck1zl3xvb000o2ejftfno5j11" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2019/08/11/Kotlin/" data-id="ck23qkxhd000lehjepemfv0bb" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -623,7 +759,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/08/11/AndroidTV/" data-id="ck1zl3xtz00022ejfo6ues1r6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2019/08/11/AndroidTV/" data-id="ck23qkxgr0005ehjeu4lru39b" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -756,7 +892,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/08/08/Game/" data-id="ck1zl3xup000a2ejfnmnktk0w" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2019/08/08/Game/" data-id="ck23qkxh5000cehjeqreovzls" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -886,7 +1022,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/23/RxJava/" data-id="ck1zl3xvc000p2ejfec7jzpv8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2019/07/23/RxJava/" data-id="ck23qkxhj000rehjek5kihnff" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1011,7 +1147,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/18/Dart/" data-id="ck1zl3xuf00062ejfzk1nvl4c" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2019/07/18/Dart/" data-id="ck23qkxgq0004ehjezxxuxnak" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1131,7 +1267,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/15/Lottie/" data-id="ck1zl3xv3000g2ejf99rfifu6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2019/07/15/Lottie/" data-id="ck23qkxhb000jehjerfwudx6v" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1254,131 +1390,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/07/15/Android-RecyclerView/" data-id="ck1zl3xu300042ejf4wnnn56o" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Jetbrains-IDE" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2019/07/15/Jetbrains-IDE/">Jetbrains IDE</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2019/07/15/Jetbrains-IDE/">
-            <time datetime="2019-07-15T14:23:18.000Z" itemprop="datePublished">2019-07-15</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p><a href="https://blog.jetbrains.com/scala/2019/07/02/functional-highlighting-for-functional-programming/" target="_blank" rel="noopener">https://blog.jetbrains.com/scala/2019/07/02/functional-highlighting-for-functional-programming/</a></p>
-<p><a href="https://blog.jetbrains.com/clion/2019/07/clion-2019-2-eap-peripheral-view-for-arm-devices/" target="_blank" rel="noopener">https://blog.jetbrains.com/clion/2019/07/clion-2019-2-eap-peripheral-view-for-arm-devices/</a></p>
-<p><a href="https://blog.jetbrains.com/go/2019/06/06/goland-2019-2-eap-2/" target="_blank" rel="noopener">https://blog.jetbrains.com/go/2019/06/06/goland-2019-2-eap-2/</a></p>
-<p><a href="https://blog.jetbrains.com/rscpp/resharper-cpp-2019-2/" target="_blank" rel="noopener">https://blog.jetbrains.com/rscpp/resharper-cpp-2019-2/</a></p>
-<p><a href="https://www.jetbrains.com/resharper-cpp/documentation/documentation.html" target="_blank" rel="noopener">https://www.jetbrains.com/resharper-cpp/documentation/documentation.html</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2019/07/15/Jetbrains-IDE/" data-id="ck1zl3xv5000h2ejf9ts1a1hc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2019/07/15/Android-RecyclerView/" data-id="ck23qkxge0000ehje4mwfav92" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1471,6 +1483,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2019/10/23/Go/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2019/10/23/Go/" class="title">Go</a></p>
+                            <p class="item-date"><time datetime="2019-10-22T23:05:24.000Z" itemprop="datePublished">2019-10-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2019/10/20/Linux-Distro/" class="thumbnail">
     
     
@@ -1544,25 +1575,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/10/02/OpenResty/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/10/02/OpenResty/" class="title">OpenResty</a></p>
-                            <p class="item-date"><time datetime="2019-10-02T04:31:37.000Z" itemprop="datePublished">2019-10-02</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1574,7 +1586,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
