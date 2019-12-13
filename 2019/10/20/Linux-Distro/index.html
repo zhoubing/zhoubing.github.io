@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/10/20/Linux-Distro/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="https://medium.com/@lhennessy/psychedelic-awesome-wm-on-arch-linux-6f8dc053a133 https://blog.csdn.net/minghe_uestc/article/details/7489157 https://forum.suse.org.cn/t/awesome/2047 https://cloud.tencen">
-<meta property="og:updated_time" content="2019-11-25T13:54:23.515Z">
+<meta property="og:updated_time" content="2019-12-10T01:22:29.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux Distro">
 <meta name="twitter:description" content="https://medium.com/@lhennessy/psychedelic-awesome-wm-on-arch-linux-6f8dc053a133 https://blog.csdn.net/minghe_uestc/article/details/7489157 https://forum.suse.org.cn/t/awesome/2047 https://cloud.tencen">
@@ -248,6 +248,14 @@
 <p><a href="https://cloud.tencent.com/developer/article/1390999" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1390999</a></p>
 <p><a href="https://www.youtube.com/results?search_query=awesome+i3" target="_blank" rel="noopener">https://www.youtube.com/results?search_query=awesome+i3</a></p>
 <p><a href="https://askubuntu.com/questions/583639/how-can-i-get-rid-of-unknown-display" target="_blank" rel="noopener">https://askubuntu.com/questions/583639/how-can-i-get-rid-of-unknown-display</a></p>
+<p>###manjaro设置<br><code>sudo pacman -Syyu</code> 升级系统到最新<br><code>kate /etc/pacman.conf</code> 配置源</p>
+<p>国内镜像 包括core extra community multilib<br><code>sudo pacman-mirrors -i -c China -m rank</code> 更新镜像排名<br><code>sudo pacman -Syy</code> 更新数据源</p>
+<p>archlinuxcn 源 中科大</p>
+<p><code>[archlinuxcn]</code><br><code>SigLevel = Optional TrustedOnly</code><br><code>Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch</code><br><code>sudo pacman -Syyu //更新数据源</code><br><code>sudo pacman -S archlinuxcn-keyring //安装导入GPG key</code></p>
+<p>aur源</p>
+<p>修改/etc/yaourtrc，去掉 # AURURL 的注释，修改为</p>
+<p><code>AURURL=&quot;https://aur.tuna.tsinghua.edu.cn&quot;</code></p>
+<p>###manjaro安装后配置<br><a href="https://www.jianshu.com/p/8761912a1b01" target="_blank" rel="noopener">https://www.jianshu.com/p/8761912a1b01</a></p>
 
         
         </div>
@@ -258,7 +266,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2019/10/20/Linux-Distro/" data-id="ck3u416oz000k8fjefv5duyns" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2019/10/20/Linux-Distro/" data-id="ck448wlze000kx0jefvlzemkv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
