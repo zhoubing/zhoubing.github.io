@@ -5,12 +5,18 @@
     
     <title>Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
+    <meta name="description" content="##Ubuntu最小化安装软件清单  https://people.canonical.com/~ubuntu-archive/seeds/ubuntu.focal/desktop.minimal-remove">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/05/20/ubuntu_minimal/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##Ubuntu最小化安装软件清单  https://people.canonical.com/~ubuntu-archive/seeds/ubuntu.focal/desktop.minimal-remove">
+<meta property="og:image" content="https://assets.ubuntu.com/v1/411e1474-releases-lockup.svg">
+<meta property="og:updated_time" content="2020-05-20T00:50:55.879Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="##Ubuntu最小化安装软件清单  https://people.canonical.com/~ubuntu-archive/seeds/ubuntu.focal/desktop.minimal-remove">
+<meta name="twitter:image" content="https://assets.ubuntu.com/v1/411e1474-releases-lockup.svg">
     
 
     
@@ -205,8 +211,7 @@
 </aside>
 
             
-            <section id="main">
-    <article id="post-ubuntu_minimal" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-ubuntu_minimal" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -299,350 +304,24 @@
         </footer>
     </div>
     
-</article>
-
-
-
-    <article id="post-trojan" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
         
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>AppImage版本的Trojan-Qt5在Ubuntu上不能翻墙的问题</p>
-<p>查看Help-&gt;Trojan Log发现在Connect后一直显示SSL handshake failed with xxx.xxx.xxx:443: certificate verify failed。在Github的wiki上找到了答案。</p>
-<p><a href="https://github.com/Trojan-Qt5/Trojan-Qt5/wiki/FAQ" target="_blank" rel="noopener">https://github.com/Trojan-Qt5/Trojan-Qt5/wiki/FAQ</a></p>
-<p>####SSL handshake failed with xxx.xxx.xxx:443: certificate verify failed</p>
-<p>The certificate of the server is self-signed, go to the profile editor.<br>Disable <code>Verify Certificate</code> and Disable <code>Verify Hostname</code>.<br>The issue should be solved by now.</p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2020/05/16/trojan/" data-id="ckaemrnz90001dx3lr4lwhd54" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
+<nav id="article-nav">
     
-
-        </footer>
-    </div>
     
-</article>
-
-
-
-    <article id="post-atomic_kotlin" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2020/05/10/atomic_kotlin/">Atomic Kotlin</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2020/05/10/atomic_kotlin/">
-            <time datetime="2020-05-10T02:20:13.000Z" itemprop="datePublished">2020-05-10</time>
+        <a href="/2020/05/16/trojan/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title"></div>
         </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>C++编程思想作者与Kotlin核心团队成员两位大神联合出手，值得期待。完成度80%！</p>
-<p>外网地址：<a href="https://leanpub.com/AtomicKotlin" target="_blank" rel="noopener">https://leanpub.com/AtomicKotlin</a></p>
-<p><img src="../pic/hero2x.png" alt="hero2x"></p>
-<h4 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h4><ul>
-<li><ul>
-<li>Copyright</li>
-</ul>
-</li>
-<li>Section I: Programming Basics<ul>
-<li>Introduction</li>
-<li>Hello, World!</li>
-<li><code>var</code> &amp; <code>val</code></li>
-<li>Data Types</li>
-<li>Functions</li>
-<li><code>if</code> Expressions</li>
-<li>String Templates</li>
-<li>Number Types</li>
-<li>Booleans</li>
-<li>Repetition with <code>while</code></li>
-<li>Looping &amp; Ranges</li>
-<li>The <code>in</code> Keyword</li>
-<li>Expressions &amp; Statements</li>
-<li>Summary 1</li>
-</ul>
-</li>
-<li>Section II: Introduction to Objects<ul>
-<li>Objects Everywhere</li>
-<li>Creating Classes</li>
-<li>Properties</li>
-<li>Constructors</li>
-<li>Constraining Visibility</li>
-<li>Packages</li>
-<li>Testing</li>
-<li>Exceptions</li>
-<li>Lists</li>
-<li>Variable Argument Lists</li>
-<li>Sets</li>
-<li>Maps</li>
-<li>Property Accessors</li>
-<li>Summary 2</li>
-</ul>
-</li>
-<li>Section III: Usability<ul>
-<li>Extension Functions</li>
-<li>Named &amp; Default Arguments</li>
-<li>Overloading</li>
-<li><code>when</code> Expressions</li>
-<li>Enumerations</li>
-<li>Data Classes</li>
-<li>Destructuring Declarations</li>
-<li>Nullable Types</li>
-<li>Safe Calls &amp; the Elvis Operator</li>
-<li>Non-<code>null</code> Assertions</li>
-<li>Extensions for Nullable Types</li>
-<li>Introduction to Generics</li>
-<li>Extension Properties</li>
-<li><code>break</code> &amp; <code>continue</code></li>
-</ul>
-</li>
-<li>Section IV: Functional Programming<ul>
-<li>Lambdas</li>
-<li>The Importance of Lambdas</li>
-<li>Operations on Collections</li>
-<li>Member References</li>
-<li>Higher-Order Functions</li>
-<li>Manipulating Lists</li>
-<li>Building Maps</li>
-<li>Sequences</li>
-<li>Local Functions</li>
-<li>Folding Lists</li>
-<li>Recursion</li>
-</ul>
-</li>
-<li>Section V: Object-Oriented Programming<ul>
-<li>Interfaces</li>
-<li>Complex Constructors</li>
-<li>Secondary Constructors</li>
-<li>Inheritance</li>
-<li>Base Class Initialization</li>
-<li>Abstract Classes</li>
-<li>Upcasting</li>
-<li>Polymorphism</li>
-<li>Composition</li>
-<li>Inheritance &amp; Extensions</li>
-<li>Class Delegation</li>
-<li>Downcasting</li>
-<li>Sealed Classes</li>
-<li>Nested Classes</li>
-<li>Inner Classes</li>
-<li>Objects</li>
-<li>Companion Objects</li>
-<li>Object-Oriented Design</li>
-</ul>
-</li>
-<li>Section VI: Preventing Failure<ul>
-<li>Exception Handling</li>
-<li>Check Instructions</li>
-<li>The <code>Nothing</code> Type</li>
-<li>Resource Cleanup</li>
-<li>Logging</li>
-<li>Unit Testing</li>
-</ul>
-</li>
-<li>Section VII: Power Tools<ul>
-<li>Lambda with Receiver</li>
-<li>More Generics</li>
-<li>The <code>with()</code> Function</li>
-<li>Scope Functions</li>
-<li>Immutability</li>
-<li>Hashing</li>
-<li>Operator Overloading</li>
-<li>Using Operators</li>
-<li>Lazy Initialization</li>
-<li>Late Initialization</li>
-<li>Property Delegation</li>
-<li>Property Delegation Tools</li>
-</ul>
-</li>
-<li>Appendices<ul>
-<li>Appendix A: AtomicTest</li>
-<li>Appendix B: Java Interoperability</li>
-</ul>
-</li>
-</ul>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2020/05/10/atomic_kotlin/" data-id="ckaemrnz20000dx3lppfteffs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
     
+</nav>
 
-        </footer>
-    </div>
+
     
 </article>
 
+
+    
+    
 
 </section>
             
